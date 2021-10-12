@@ -6,48 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index-style.css">
+    <link rel="shortcut icon" type="imagex/png" href="../img/logo/movmax2.png">
     <title>MovieMax</title>
 </head>
-<body class>
-    <div class="nome bg-light text-center">
-        <h1>MovieMax</h1>
-    </div>
-
-    <nav class="navbar navbar-expand-lg navbar-light cor1">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">MovieMax</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Filmes</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                  Opções
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                  <li><a class="dropdown-item" href="#">Ação</a></li>
-                  <li><a class="dropdown-item" href="#">Comédia</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Animação</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link ">Plano</a>
-              </li>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light cor1">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="text1" href="#">MovieMax</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" id="text1" aria-current="page" href="#">Filmes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="text1" href="#">Documentario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="text1" href="#">Série</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="text1" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Opções
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="#">Comédia</a></li>
+              <li><a class="dropdown-item" href="#">Ação</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Documentarios</a></li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" id="text1">Plano</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" id="text1" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
 
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -77,8 +79,10 @@
       </div>
 
     <div class="container text-light">
+    <br><br>
         <h2>Filmes</h2>
     </div>
+    <br><br>
 
     <div class="container">
          <div class="row">
@@ -94,18 +98,7 @@
              <div class="col-md-3">
                 <img src="../img/Filmes/dune.jpg" class="img-fluid" alt="...">
              </div>
-             <div class="col-md-3">
-                <img src="../img/Filmes/dupla explosiva.jpg" class="img-fluid" alt="...">
-             </div>
-             <div class="col-md-3">
-              <img src="../img/Filmes/ilhados.jpg" class="img-fluid" alt="...">
-             </div>
-             <div class="col-md-3">
-              <img src="../img/Filmes/infiltrado.jpg" class="img-fluid" alt="...">
-             </div>
-             <div class="col-md-3">
-              <img src="../img/Filmes/pegue a bala.jpg" class="img-fluid" alt="...">
-             </div>
+             
 
         </div>
     
