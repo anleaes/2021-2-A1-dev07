@@ -4,6 +4,4 @@
 
 ## MovieMax
 
-![Screenshot](front-end/img/logo/moviemax2.png)
-
 ### O projeto é um site de streaming de filmes, séries e documentários!! 
