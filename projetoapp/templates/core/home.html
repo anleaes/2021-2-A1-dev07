@@ -4,9 +4,89 @@
     {{ block.super }}
 {% endblock title %}
 
+{% load static %}
+
 {% block body %}
+    
+<div class="container text-light">
+    <br><br>
+        <h2>Filmes</h2>
+    </div>
+    <br><br>
 
-<!-- Codigo html especifico desse arquivo -->
+    <div class="container">
+         <div class="row">
+             <div class="col-md-3">
+                <img src="{% static 'img/Filmes/a guerra dos tronos.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             <div class="col-md-3">
+                <img src="{% static 'img/Filmes/aceleração maxima.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             <div class="col-md-3">
+                <img src="{% static 'img/Filmes/anime.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             <div class="col-md-3">
+                <img src="{% static 'img/Filmes/dune.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             
 
+        </div>
+    
+    </div>
+
+    <br><br>
+
+    <div class="container text-light">
+        <h2>Séries</h2>
+    </div> 
+
+    <br><br>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-3">
+                <img src="{% static 'img/Series/admiravel mundo novo.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             <div class="col-md-3">
+                <img src="{% static 'img/Series/elite.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             <div class="col-md-3">
+                <img src="{% static 'img/Series/interregation.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             <div class="col-md-3">
+              <img src="{% static 'img/Series/loki.jpg' %}" class="img-fluid" alt="...">
+             </div>          
+        </div>
+    </div>
+
+    <br><br>
+
+    <div class="container text-light">
+        <h2>Documentários</h2>
+    </div> 
+
+    <br><br>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-3">
+                <img src="{% static 'img/Documentarios/a estrela.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             <div class="col-md-3">
+                <img src="{% static 'img/Documentarios/a morte da nação.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             <div class="col-md-3">
+                <img src="{% static 'img/Documentarios/barack obama.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             <div class="col-md-3">
+                <img src="{% static 'img/Documentarios/lei da agua.jpg' %}" class="img-fluid" alt="...">
+             </div>
+             </div>
+        </div>
+    </div>
+    <br><br>
 
 {% endblock body %}
+

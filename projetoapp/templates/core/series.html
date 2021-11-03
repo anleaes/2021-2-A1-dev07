@@ -1,56 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Séries
+{% endblock title %}
+
+{% block body %}
+
 {% load static %}
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}"> -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/index-style.css' %}">
-    <link rel="shortcut icon" type="imagex/png" href="{% static 'img/logo/movmax2.png' %}">
-    <title>{% block title %}Séries{% endblock title %}</title>
-</head>
-<body>
-
-    <!-- INICIO: Bloco do Bootstrap a ser incluido -->
-    <nav class="navbar navbar-expand-lg navbar-light cor1">
-        <div class="container-fluid">
-          <a class="navbar-brand" id="text1" href="{% url 'core:home' %}">MovieMax</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link active" id="text1" aria-current="page" href="{% url 'core:filmes' %}">Filmes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="text1" href="{% url 'core:documentarios' %}">Documentarios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="text1" href="{% url 'core:series' %}">Séries</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="text1" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Opções
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                  <li><a class="dropdown-item" href="{% url 'core:home' %}">Início</a></li>
-                  <li><a class="dropdown-item" href="{% url 'core:planos' %}">Planos</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="{% url 'core:login' %}">Sair</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" id="text1" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
     
         <div class="container text-light">
         <br><br>
@@ -75,16 +31,5 @@
                  </div>          
             </div>
         </div>
-    <!-- FIM: Bloco do Bootstrap a ser incluido -->
-
-    {% block body %}
     
     {% endblock body %}
-    
-    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
-    <!-- <script src="{% static 'js/jquery.mask.min.js' %}"></script>
-    <script src="{% static 'js/jquery-ui.js' %}"></script> -->
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-</body>
-</html>

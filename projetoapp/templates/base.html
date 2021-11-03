@@ -1,0 +1,167 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index-style.css' %}">
+    <link rel="shortcut icon" type="imagex/png" href="{% static 'img/logo/movmax2.png' %}">
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <title>{% block title %}Moviemax{% endblock title %}</title>
+</head>
+<body>
+   
+  {% if request.path == '/home' %}
+   <nav class="navbar navbar-expand-lg navbar-light cor1">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="text1" href="{% url 'core:home' %}">MovieMax</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" id="text1" aria-current="page" href="{% url 'core:filmes' %}">Filmes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="text1" href="{% url 'core:documentarios' %}">Documentarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="text1" href="{% url 'core:series' %}">Séries</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="text1" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Opções
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="{% url 'core:home' %}">Início</a></li>
+              <li><a class="dropdown-item" href="{% url 'core:planos' %}">Planos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'core:login' %}">Sair</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" id="text1" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'img/backgrounds/venom.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/backgrounds/amizade colorida.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/backgrounds/nao vai ter golpe.jpg' %}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  {% elif request.path == '/planos' %}
+  <head><link rel="stylesheet" href="{% static 'css/tabela-style.css' %}"></head>
+  <nav class="navbar navbar-expand-lg navbar-light cor1">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="text1" href="{% url 'core:home' %}">MovieMax</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" id="text1" aria-current="page" href="{% url 'core:filmes' %}">Filmes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="text1" href="{% url 'core:documentarios' %}">Documentarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="text1" href="{% url 'core:series' %}">Séries</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="text1" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Opções
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="{% url 'core:home' %}">Início</a></li>
+              <li><a class="dropdown-item" href="{% url 'core:planos' %}">Planos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'core:login' %}">Sair</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {% elif request.path == '/login' or request.path == '' %}
+  <head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login-style.css' %}">
+  </head>
+  
+  {% else %}
+  <nav class="navbar navbar-expand-lg navbar-light cor1">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="text1" href="{% url 'core:home' %}">MovieMax</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" id="text1" aria-current="page" href="{% url 'core:filmes' %}">Filmes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="text1" href="{% url 'core:documentarios' %}">Documentarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="text1" href="{% url 'core:series' %}">Séries</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="text1" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Opções
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="{% url 'core:home' %}">Início</a></li>
+              <li><a class="dropdown-item" href="{% url 'core:planos' %}">Planos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{% url 'core:login' %}">Sair</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" id="text1" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+    {% endif %}
+
+    {% block body %}
+    
+    {% endblock body %}
+    
+</body>
+</html>
